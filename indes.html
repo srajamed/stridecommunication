@@ -1,3 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stride Logistics Communication Workshop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-y: auto;
+}
+        .presentation-container {
+    width: 100vw;
+    position: relative;
+}
+        
+        .slide {
+        display: block;
+        width: 100%;
+        padding: 40px;
+        background: white;
+        position: static;
+        overflow-y: visible;
+        margin-bottom: 40px;
+}
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .slide h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .slide h2 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .slide h3 {
+            font-size: 1.5em;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .slide ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 0 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .title-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .title-slide h1 {
+            color: white;
+            font-size: 3em;
+            border: none;
+        }
+        
+        .activity-slide {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        
+        .dos-donts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .dos, .donts {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .dos {
+            background: #d5f4e6;
+            border-left: 5px solid #27ae60;
+        }
+        
+        .donts {
+            background: #fdeaea;
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .star-method {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .star-item {
+            text-align: center;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 10px;
+        }
+        
+        .star-item h4 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        
+        .company-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <div class="slide title-slide active">
+            <h1>Professional Communication Excellence</h1>
+            <h2>Day 1: Communication Fundamentals</h2>
+            <div class="company-info">
+                <h3>Stride Logistics & Consultants</h3>
+                <p>Building bridges between traditional logistics and modern digital solutions</p>
+            </div>
+            <p style="font-size: 1.5em; margin-top: 40px;">Duration: 90 Minutes</p>
+        </div>
+
+        <!-- Slide 2: Agenda -->
+        <div class="slide">
+            <h1>Today's Agenda</h1>
+            <div style="font-size: 1.3em; line-height: 2;">
+                <h3>Part A: Communication Fundamentals (30 minutes)</h3>
+                <p>• Eye contact and body language mastery</p>
+                <p>• Active listening techniques</p>
+                <p>• Small talk and professional conversations</p>
+                
+                <h3>Part B: Professional Introductions (30 minutes)</h3>
+                <p>• Interview preparation and structure</p>
+                <p>• Email and meeting etiquette</p>
+                <p>• Networking and handshake protocols</p>
+                
+                <h3>Part C: Practice Activities (30 minutes)</h3>
+                <p>• Breakout room exercises</p>
+                <p>• Peer practice sessions</p>
+                <p>• Homework assignment</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Part A Introduction -->
+        <div class="slide">
+            <h1>Part A: Communication Fundamentals</h1>
+            <div class="highlight-box">
+                <h2>Why Communication Matters in Logistics</h2>
+                <p>In the fast-paced world of supply chain and logistics, clear communication can mean the difference between:</p>
+                <ul>
+                    <li><strong>On-time delivery vs. delays</strong></li>
+                    <li><strong>Client satisfaction vs. complaints</strong></li>
+                    <li><strong>Team efficiency vs. confusion</strong></li>
+                    <li><strong>Career growth vs. stagnation</strong></li>
+                </ul>
+            </div>
+            <p><strong>Remember:</strong> At Stride Logistics, we bridge gaps between traditional and modern systems. Your communication skills are the bridge between you and success.</p>
+        </div>
+
+        <!-- Slide 4: Eye Contact Mastery -->
+        <div class="slide">
+            <h1>Eye Contact: The Foundation of Trust</h1>
+            <h2>Why Eye Contact Matters</h2>
+            <ul>
+                <li><strong>Builds trust and credibility</strong> - Essential when discussing logistics solutions</li>
+                <li><strong>Shows confidence and competence</strong> - Critical for client interactions</li>
+                <li><strong>Demonstrates active engagement</strong> - Important in team meetings</li>
+                <li><strong>Conveys sincerity</strong> - Vital for building professional relationships</li>
+            </ul>
+            
+            <div class="dos-donts">
+                <div class="dos">
+                    <h3>✅ DO</h3>
+                    <ul>
+                        <li>Maintain 60-70% eye contact during conversations</li>
+                        <li>Look at the interviewer when answering questions</li>
+                        <li>Make brief eye contact with all participants in group meetings</li>
+                        <li>Use the "triangle technique" - eyes, nose, mouth</li>
+                    </ul>
+                </div>
+                <div class="donts">
+                    <h3>❌ DON'T</h3>
+                    <ul>
+                        <li>Stare continuously (makes people uncomfortable)</li>
+                        <li>Look at your phone or computer while speaking</li>
+                        <li>Avoid eye contact completely (appears disinterested)</li>
+                        <li>Look away when discussing important points</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Body Language Fundamentals -->
+        <div class="slide">
+            <h1>Body Language: Your Silent Communicator</h1>
+            <h2>The 55-38-7 Rule</h2>
+            <div class="highlight-box">
+                <p><strong>55%</strong> Body language and visual cues</p>
+                <p><strong>38%</strong> Tone of voice</p>
+                <p><strong>7%</strong> Actual words spoken</p>
+            </div>
+            
+            <h3>Professional Posture Guidelines</h3>
+            <ul>
+                <li><strong>Stand tall</strong> - Shoulders back, chin up</li>
+                <li><strong>Sit forward</strong> - Shows engagement in meetings</li>
+                <li><strong>Open gestures</strong> - Avoid crossed arms</li>
+                <li><strong>Firm handshake</strong> - 2-3 seconds, web-to-web contact</li>
+                <li><strong>Appropriate space</strong> - Maintain 3-4 feet in professional settings</li>
+            </ul>
+            
+            <p><strong>Logistics Tip:</strong> When presenting shipping solutions or discussing freight challenges, confident body language reinforces your expertise.</p>
+        </div>
+
+        <!-- Slide 6: Active Listening -->
+        <div class="slide">
+            <h1>Active Listening: The Key to Understanding</h1>
+            <h2>Why Active Listening is Critical in Logistics</h2>
+            <ul>
+                <li>Prevents costly misunderstandings in shipping instructions</li>
+                <li>Builds stronger client relationships</li>
+                <li>Helps identify hidden problems in supply chain processes</li>
+                <li>Shows respect for colleagues and supervisors</li>
+            </ul>
+            
+            <h3>The SOLER Technique</h3>
+            <div class="star-method">
+                <div class="star-item">
+                    <h4>S - Square</h4>
+                    <p>Face the speaker directly</p>
+                </div>
+                <div class="star-item">
+                    <h4>O - Open</h4>
+                    <p>Keep an open posture</p>
+                </div>
+                <div class="star-item">
+                    <h4>L - Lean</h4>
+                    <p>Lean in slightly to show interest</p>
+                </div>
+                <div class="star-item">
+                    <h4>E - Eye</h4>
+                    <p>Maintain appropriate eye contact</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <div class="star-item" style="display: inline-block;">
+                    <h4>R - Relax</h4>
+                    <p>Stay calm and focused</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Small Talk Mastery -->
+        <div class="slide">
+            <h1>Small Talk: Building Professional Bridges</h1>
+            <h2>Why Small Talk Matters</h2>
+            <p>Small talk is the foundation of professional relationships. It helps you:</p>
+            <ul>
+                <li>Build rapport with clients before discussing logistics solutions</li>
+                <li>Create comfortable environments for negotiations</li>
+                <li>Establish trust in international business relationships</li>
+                <li>Network effectively at industry events</li>
+            </ul>
+            
+            <div class="dos-donts">
+                <div class="dos">
+                    <h3>✅ SAFE TOPICS</h3>
+                    <ul>
+                        <li>Weather and current events</li>
+                        <li>Professional interests and industry trends</li>
+                        <li>Travel (especially relevant in logistics)</li>
+                        <li>Local restaurants and culture</li>
+                        <li>Recent achievements or projects</li>
+                    </ul>
+                </div>
+                <div class="donts">
+                    <h3>❌ AVOID</h3>
+                    <ul>
+                        <li>Personal finances</li>
+                        <li>Political opinions</li>
+                        <li>Personal health issues</li>
+                        <li>Negative gossip about colleagues</li>
+                        <li>Controversial social topics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: English Practice Importance -->
+        <div class="slide">
+            <h1>English Fluency: Your Global Advantage</h1>
+            <h2>Why English Mastery is Essential</h2>
+            <div class="highlight-box">
+                <p><strong>Stride Logistics operates globally</strong> - English is the universal business language in logistics, connecting you with clients across continents.</p>
+            </div>
+            
+            <h3>Daily Practice Strategies</h3>
+            <ul>
+                <li><strong>Think in English</strong> - Practice internal dialogue in English</li>
+                <li><strong>Read logistics industry publications</strong> - Supply Chain Management Review, Logistics Management</li>
+                <li><strong>Listen to business podcasts</strong> - Focus on logistics and supply chain content</li>
+                <li><strong>Practice with colleagues</strong> - Use English in internal communications</li>
+                <li><strong>Record yourself</strong> - Practice presentations and listen back</li>
+            </ul>
+            
+            <p><strong>Goal:</strong> Speak with confidence about freight forwarding, cargo tracking, and supply chain optimization in clear, professional English.</p>
+        </div>
+
+        <!-- Slide 9: Part B Introduction -->
+        <div class="slide">
+            <h1>Part B: Professional Introductions</h1>
+            <div class="highlight-box">
+                <h2>First Impressions in Logistics</h2>
+                <p>You never get a second chance to make a first impression. In logistics, where trust and reliability are paramount, your introduction sets the tone for:</p>
+                <ul>
+                    <li>Client relationships worth millions in freight volume</li>
+                    <li>Partnerships with shipping lines and carriers</li>
+                    <li>Career advancement opportunities</li>
+                    <li>International business negotiations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 10: Interview Preparation -->
+        <div class="slide">
+            <h1>Interview Excellence: Structure is Key</h1>
+            <h2>The STAR Method for Behavioral Questions</h2>
+            <div class="star-method">
+                <div class="star-item">
+                    <h4>S - Situation</h4>
+                    <p>Set the context and background</p>
+                </div>
+                <div class="star-item">
+                    <h4>T - Task</h4>
+                    <p>Describe the challenge or responsibility</p>
+                </div>
+                <div class="star-item">
+                    <h4>A - Action</h4>
+                    <p>Explain what you did</p>
+                </div>
+                <div class="star-item">
+                    <h4>R - Result</h4>
+                    <p>Share the positive outcome</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Example for Logistics Role:</h3>
+                <p><strong>Situation:</strong> "Our client's shipment was delayed at port due to documentation issues..."</p>
+                <p><strong>Task:</strong> "I needed to resolve this quickly to prevent further delays..."</p>
+                <p><strong>Action:</strong> "I contacted the customs broker, coordinated with the shipping line..."</p>
+                <p><strong>Result:</strong> "The shipment cleared within 24 hours, saving the client $50,000 in penalties."</p>
+            </div>
+        </div>
+
+        <!-- Slide 11: Email and Meeting Etiquette -->
+        <div class="slide">
+            <h1>Professional Communication Protocols</h1>
+            <h2>Email Excellence</h2>
+            <div class="dos-donts">
+                <div class="dos">
+                    <h3>✅ EMAIL BEST PRACTICES</h3>
+                    <ul>
+                        <li>Clear, specific subject lines</li>
+                        <li>Professional greeting and closing</li>
+                        <li>Concise, structured content</li>
+                        <li>Proofread before sending</li>
+                        <li>Respond within 24 hours</li>
+                    </ul>
+                </div>
+                <div class="donts">
+                    <h3>❌ EMAIL MISTAKES</h3>
+                    <ul>
+                        <li>All caps (appears aggressive)</li>
+                        <li>Too casual language</li>
+                        <li>Reply all unnecessarily</li>
+                        <li>Unclear requests or questions</li>
+                        <li>Grammar and spelling errors</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Essential Corporate Phrases</h3>
+            <ul>
+                <li><strong>"I wanted to follow up on..."</strong></li>
+                <li><strong>"Please let me know if you need any clarification..."</strong></li>
+                <li><strong>"I look forward to your response..."</strong></li>
+                <li><strong>"Thank you for bringing this to my attention..."</strong></li>
+            </ul>
+        </div>
+
+        <!-- Slide 12: Speaking with Confidence -->
+        <div class="slide">
+            <h1>Confident Communication: Structure Your Success</h1>
+            <h2>The PEP Formula for Clear Communication</h2>
+            <div class="star-method" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="star-item">
+                    <h4>P - Point</h4>
+                    <p>State your main message clearly</p>
+                </div>
+                <div class="star-item">
+                    <h4>E - Evidence</h4>
+                    <p>Provide supporting details</p>
+                </div>
+                <div class="star-item">
+                    <h4>P - Point</h4>
+                    <p>Restate your conclusion</p>
+                </div>
+            </div>
+            
+            <h3>Building Structured Sentences</h3>
+            <ul>
+                <li><strong>Use transition words:</strong> "Furthermore," "However," "As a result"</li>
+                <li><strong>Be specific:</strong> "reduced costs by 15%" instead of "saved money"</li>
+                <li><strong>Use active voice:</strong> "I managed the project" not "The project was managed"</li>
+                <li><strong>Pause for emphasis:</strong> Allow important points to sink in</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Logistics Example:</strong> "Our new tracking system has improved delivery accuracy. Evidence shows we've reduced lost shipments by 25% and increased customer satisfaction scores by 30%. This tracking system is clearly delivering measurable value."</p>
+            </div>
+        </div>
+
+        <!-- Slide 13: Handshake and Introduction Protocol -->
+        <div class="slide">
+            <h1>The Perfect Professional Introduction</h1>
+            <h2>Handshake Mastery</h2>
+            <div class="highlight-box">
+                <h3>The 3-Second Rule</h3>
+                <ul>
+                    <li><strong>Web-to-web contact</strong> - Palm to palm, not fingertips</li>
+                    <li><strong>2-3 firm pumps</strong> - Not too many, not too few</li>
+                    <li><strong>Maintain eye contact</strong> - Shows confidence and respect</li>
+                    <li><strong>Stand up if seated</strong> - Shows respect and professionalism</li>
+                </ul>
+            </div>
+            
+            <h3>Introduction Structure</h3>
+            <div style="font-size: 1.3em; background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <p><strong>1. Greeting:</strong> "Good morning/afternoon"</p>
+                <p><strong>2. Name:</strong> "I'm [First Name Last Name]"</p>
+                <p><strong>3. Role:</strong> "I'm a [Position] at Stride Logistics"</p>
+                <p><strong>4. Value:</strong> "I specialize in optimizing freight operations"</p>
+                <p><strong>5. Engagement:</strong> "How can I help you today?"</p>
+            </div>
+        </div>
+
+        <!-- Slide 14: Networking Fundamentals -->
+        <div class="slide">
+            <h1>Networking: Building Your Professional Network</h1>
+            <h2>Why Networking Matters in Logistics</h2>
+            <ul>
+                <li>Logistics is relationship-driven - carriers, shippers, brokers</li>
+                <li>Information sharing prevents supply chain disruptions</li>
+                <li>Referrals drive 85% of logistics business</li>
+                <li>Industry knowledge spreads through professional networks</li>
+            </ul>
+            
+            <h3>Networking Strategy</h3>
+            <div class="dos-donts">
+                <div class="dos">
+                    <h3>✅ EFFECTIVE NETWORKING</h3>
+                    <ul>
+                        <li>Ask about their logistics challenges</li>
+                        <li>Share relevant industry insights</li>
+                        <li>Exchange business cards professionally</li>
+                        <li>Follow up within 48 hours</li>
+                        <li>Offer help before asking for favors</li>
+                    </ul>
+                </div>
+                <div class="donts">
+                    <h3>❌ NETWORKING MISTAKES</h3>
+                    <ul>
+                        <li>Talking only about yourself</li>
+                        <li>Interrupting conversations</li>
+                        <li>Being pushy or aggressive</li>
+                        <li>Forgetting names immediately</li>
+                        <li>Not following up</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 15: Articulating Achievements -->
+        <div class="slide">
+            <h1>Articulating Your Value Proposition</h1>
+            <h2>How to Talk About Your Achievements</h2>
+            <div class="highlight-box">
+                <h3>The CAR Method</h3>
+                <p><strong>C - Challenge:</strong> What problem did you face?</p>
+                <p><strong>A - Action:</strong> What did you do about it?</p>
+                <p><strong>R - Result:</strong> What was the positive outcome?</p>
+            </div>
+            
+            <h3>Quantify Your Impact</h3>
+            <ul>
+                <li><strong>Instead of:</strong> "I improved delivery times"</li>
+                <li><strong>Say:</strong> "I reduced average delivery times by 3 days, improving customer satisfaction by 40%"</li>
+            </ul>
+            
+            <h3>Logistics-Specific Achievement Examples</h3>
+            <ul>
+                <li>"Optimized routing algorithms, reducing fuel costs by 20%"</li>
+                <li>"Implemented new inventory system, decreasing stockouts by 35%"</li>
+                <li>"Negotiated with carriers, saving $500K annually in shipping costs"</li>
+                <li>"Streamlined customs processes, reducing clearance time by 50%"</li>
+            </ul>
+        </div>
+
+        <!-- Slide 16: Corporate Culture Communication -->
+        <div class="slide">
+            <h1>Corporate Culture: Getting Things Done</h1>
+            <h2>Direct but Respectful Communication</h2>
+            <div class="highlight-box">
+                <p>In corporate logistics, time is money. Be clear, concise, and actionable while maintaining professionalism.</p>
+            </div>
+            
+            <h3>Effective Corporate Phrases</h3>
+            <ul>
+                <li><strong>"Let's align on next steps..."</strong></li>
+                <li><strong>"I'll circle back with an update by..."</strong></li>
+                <li><strong>"Can we deep dive into this issue?"</strong></li>
+                <li><strong>"Let's touch base offline to discuss..."</strong></li>
+                <li><strong>"I'll take point on this initiative..."</strong></li>
+            </ul>
+            
+            <h3>Being Upfront and Solution-Oriented</h3>
+            <ul>
+                <li><strong>Identify problems early:</strong> "I've identified a potential delay..."</li>
+                <li><strong>Present solutions:</strong> "Here are three options to resolve this..."</li>
+                <li><strong>Take ownership:</strong> "I'll ensure this gets resolved by..."</li>
+                <li><strong>Communicate progress:</strong> "Here's where we stand on the project..."</li>
+            </ul>
+        </div>
+
+        <!-- Slide 17: Professional Dos and Don'ts -->
+        <div class="slide">
+            <h1>Professional Communication: Complete Guide</h1>
+            <div class="dos-donts">
+                <div class="dos">
+                    <h3>✅ ALWAYS DO</h3>
+                    <ul>
+                        <li>Arrive 5 minutes early</li>
+                        <li>Dress one level above the dress code</li>
+                        <li>Use professional email signatures</li>
+                        <li>Send thank you notes after meetings</li>
+                        <li>Ask clarifying questions</li>
+                        <li>Keep confidential information secure</li>
+                        <li>Speak clearly and at appropriate volume</li>
+                        <li>Use people's names in conversation</li>
+                    </ul>
+                </div>
+                <div class="donts">
+                    <h3>❌ NEVER DO</h3>
+                    <ul>
+                        <li>Interrupt others while speaking</li>
+                        <li>Use slang in professional settings</li>
+                        <li>Check phone during conversations</li>
+                        <li>Gossip about colleagues or clients</li>
+                        <li>Make promises you can't keep</li>
+                        <li>Ignore cultural differences</li>
+                        <li>Speak negatively about competitors</li>
+                        <li>Forget to follow up on commitments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 18: Part C - Activities Introduction -->
+        <div class="slide activity-slide">
+            <h1>Part C: Practice Makes Perfect</h1>
+            <div class="highlight-box" style="background: white;">
+                <h2>Time to Apply What You've Learned</h2>
+                <p>The next 30 minutes will be spent in practical exercises. Remember:</p>
+                <ul>
+                    <li><strong>Practice builds confidence</strong></li>
+                    <li><strong>Feedback accelerates improvement</strong></li>
+                    <li><strong>Repetition creates habits</strong></li>
+                </ul>
+            </div>
+            
+            <h3>Activity Structure</h3>
+            <ul style="font-size: 1.3em;">
+                <li><strong>Activity 1:</strong> Professional introductions (8 minutes)</li>
+                <li><strong>Activity 2:</strong> Elevator pitch practice (8 minutes)</li>
+                <li><strong>Activity 3:</strong> Active listening exercises (8 minutes)</li>
+                <li><strong>Debrief and Q&A:</strong> (6 minutes)</li>
+            </ul>
+        </div>
+
+        <!-- Slide 19: Activity 1 - Professional Introductions -->
+        <div class="slide activity-slide">
+            <h1>Activity 1: Professional Introduction Practice</h1>
+            <h2>Instructions (8 minutes total)</h2>
+            <div class="highlight-box" style="background: white;">
+                <h3>Breakout Room Exercise</h3>
+                <p><strong>Time:</strong> 6 minutes practice + 2 minutes feedback</p>
+                <p><strong>Setup:</strong> Groups of 3-4 people</p>
+            </div>
+            
+            <h3>What to Practice</h3>
+            <ul>
+                <li>Professional handshake and introduction</li>
+                <li>Eye contact maintenance</li>
+                <li>Clear articulation of your role at Stride Logistics</li>
+                <li>Engaging follow-up questions</li>
+            </ul>
+            
+            <h3>Scenarios to Practice</h3>
+            <ul>
+                <li><strong>Meeting a new client</strong> at a shipping conference</li>
+                <li><strong>Introduction in a team meeting</strong> with new colleagues</li>
+                <li><strong>Networking event</strong> with industry professionals</li>
+            </ul>
+            
+            <p><strong>Focus Points:</strong> Confident posture, clear speech, professional demeanor</p>
+        </div>
+
+        <!-- Slide 20: Activity 2 - Elevator Pitch -->
+        <div class="slide activity-slide">
+            <h1>Activity 2: Elevator Pitch Development</h1>
+            <h2>Instructions (8 minutes total)</h2>
+            <div class="highlight-box" style="background: white;">
+                <h3>Individual Preparation + Partner Practice</h3>
+                <p><strong>Time:</strong> 3 minutes preparation + 5 minutes practice</p>
+            </div>
+            
+            <h3>30-Second Elevator Pitch Structure</h3>
+            <ul>
+                <li><strong>Who you are:</strong> Name and role</li>
+                <li><strong>What you do:</strong> Your expertise in logistics</li>
+                <li><strong>Value proposition:</strong> How you help clients/company</li>
+                <li><strong>Call to action:</strong> What you want from the listener</li>
+            </ul>
+            
+            <h3>Sample Framework</h3>
+            <div style="background: white; padding: 15px; border-radius: 8px; font-style: italic;">
+                "Hi, I'm [Name], a [Position] at Stride Logistics. I specialize in [Your expertise area - freight optimization/supply chain management/cargo tracking]. I help companies reduce shipping costs and improve delivery times through smart logistics solutions. I'd love to learn more about your supply chain challenges and see how we might collaborate."
+            </div>
+        </div>
+
+        <!-- Slide 21: Activity 3 - Active Listening -->
+        <div class="slide activity-slide">
+            <h1>Activity 3: Active Listening Practice</h1>
+            <h2>Instructions (8 minutes total)</h2>
+            <div class="highlight-box" style="background: white;">
+                <h3>Partner Exercise</h3>
+                <p><strong>Time:</strong> 4 minutes each direction</p>
+                <p><strong>Setup:</strong> Pairs - Speaker and Listener roles</p>
+            </div>
+            
+            <h3>Exercise Structure</h3>
+            <ul>
+                <li><strong>Round 1 (4 minutes):</strong> Person A describes a logistics challenge they've faced</li>
+                <li><strong>Round 2 (4 minutes):</strong> Person B shares their experience</li>
+            </ul>
+            
+            <h3>Listener's Checklist</h3>
+            <ul>
+                <li>✅ Maintain eye contact</li>
+                <li>✅ Use SOLER technique</li>
+                <li>✅ Ask clarifying questions</li>
+                <li>✅ Paraphrase what you heard</li>
+                <li>✅ Avoid interrupting</li>
+            </ul>
+            
+            <h3>Sample Topics</h3>
+            <ul>
+                <li>A time when a shipment was delayed</li>
+                <li>Dealing with difficult customers</li>
+                <li>Learning new logistics software</li>
+            </ul>
+        </div>
+
+        <!-- Slide 22: Homework Assignment -->
+        <div class="slide">
+            <h1>Homework Assignment</h1>
+            <h2>Interview Response Preparation</h2>
+            <div class="highlight-box">
+                <p><strong>Due:</strong> Next session - We will review and provide feedback</p>
+                <p><strong>Format:</strong> Written responses using STAR method</p>
+            </div>
+            
+            <h3>Prepare STAR Method Responses for These Questions:</h3>
+            <ul>
+                <li><strong>Question 1:</strong> "Tell me about yourself"</li>
+                <li><strong>Question 2:</strong> "Why are you interested in this logistics position?"</li>
+                <li><strong>Question 3:</strong> "Describe a time when you solved a complex problem"</li>
+                <li><strong>Question 4:</strong> "How do you handle working under pressure?"</li>
+                <li><strong>Question 5:</strong> "Describe how you would explain logistics concepts to a client"</li>
+            </ul>
+            
+            <p><strong>Instructions:</strong> Write 150-200 words for each response using the STAR format. Focus on logistics-related examples where possible.</p>
+        </div>
+
+        <!-- Slide 23: Common Interview Question Templates -->
+        <div class="slide">
+            <h1>Interview Response Templates</h1>
+            <h2>Template 1: "Tell Me About Yourself"</h2>
+            <div class="highlight-box">
+                <p><strong>Structure:</strong> Present + Past + Future</p>
+                <p><strong>Present:</strong> "I'm currently a [role] at [company] where I [key responsibility]"</p>
+                <p><strong>Past:</strong> "I have [X years] experience in [relevant area] where I [major achievement]"</p>
+                <p><strong>Future:</strong> "I'm looking to [career goal] and believe this role at [company] is perfect because [reason]"</p>
+            </div>
+            
+            <h2>Template 2: Client Interaction Questions</h2>
+            <div class="highlight-box">
+                <p><strong>Framework:</strong> Listen + Understand + Explain + Confirm</p>
+                <ul>
+                    <li>"First, I listen carefully to understand their specific needs"</li>
+                    <li>"I ask clarifying questions to ensure I fully understand"</li>
+                    <li>"I explain the solution in simple, clear terms"</li>
+                    <li>"I confirm they understand and address any concerns"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 24: Common Interview Questions -->
+        <div class="slide">
+            <h1>Common Logistics Interview Questions</h1>
+            <h2>Be Prepared for These Questions</h2>
+            
+            <h3>Role-Specific Questions</h3>
+            <ul>
+                <li>"How do you prioritize multiple shipments with tight deadlines?"</li>
+                <li>"Describe your experience with logistics software and tracking systems"</li>
+                <li>"How would you handle a delayed shipment that affects multiple clients?"</li>
+                <li>"What's your approach to cost optimization in freight management?"</li>
+            </ul>
+            
+            <h3>Behavioral Questions</h3>
+            <ul>
+                <li>"Tell me about a time you had to work with a difficult team member"</li>
+                <li>"Describe a situation where you had to learn something quickly"</li>
+                <li>"Give an example of when you went above and beyond for a client"</li>
+                <li>"How do you handle multiple competing priorities?"</li>
+            </ul>
+            
+            <h3>Company Culture Questions</h3>
+            <ul>
+                <li>"Why do you want to work at Stride Logistics?"</li>
+                <li>"How do you stay updated with logistics industry trends?"</li>
+                <li>"What do you know about our services and clients?"</li>
+            </ul>
+        </div>
+
+        <!-- Slide 25: Session Wrap-up and Next Steps -->
+        <div class="slide">
+            <h1>Session Summary & Next Steps</h1>
+            <h2>What We Covered Today</h2>
+            <div class="star-method" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="star-item">
+                    <h4>Fundamentals</h4>
+                    <p>Eye contact, body language, active listening, small talk mastery</p>
+                </div>
+                <div class="star-item">
+                    <h4>Professional Skills</h4>
+                    <p>Introductions, handshakes, networking, email etiquette</p>
+                </div>
+                <div class="star-item">
+                    <h4>Practice</h4>
+                    <p>Real-world application through breakout activities</p>
+                </div>
+            </div>
+            
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li><strong>Practice makes permanent</strong> - Continue practicing these skills daily</li>
+                <li><strong>Structure creates confidence</strong> - Use STAR method and PEP formula</li>
+                <li><strong>Professional relationships drive success</strong> - Invest in networking</li>
+                <li><strong>Clear communication prevents problems</strong> - Be direct but respectful</li>
+            </ul>
+            
+            <div class="company-info">
+                <h3>Remember: At Stride Logistics, we bridge gaps between traditional and modern logistics.</h3>
+                <p>Your communication skills are the bridge to your professional success.</p>
+            </div>
+            
+            <h3>Next Session Preview: Day 2 - Advanced Communication & Presentation Skills</h3>
+        </div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="slideNumber">1</span> / <span id="totalSlides">25</span>
+    </div>
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            document.getElementById('slideNumber').textContent = currentSlide + 1;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                changeSlide(-1);
+            }
+        });
+        
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
+ <!-- Slide 26: Day 2 Title -->
+ <div class="slide title-slide">
+    <h1>Professional Communication Excellence</h1>
+    <h2>Day 2: Advanced Communication & Interview Mastery</h2>
+    <div class="company-info">
+        <h3>Stride Logistics & Consultants</h3>
+        <p>Elevating your communication to executive level</p>
+    </div>
+    <p style="font-size: 1.5em; margin-top: 40px;">Duration: 90 Minutes</p>
+</div>
+
+<!-- Slide 27: Day 2 Agenda -->
+<div class="slide">
+    <h1>Today's Advanced Training Agenda</h1>
+    <div style="font-size: 1.2em; line-height: 1.8;">
+        <h3>Homework Review & Interview Excellence (25 minutes)</h3>
+        <p>• Review STAR method responses</p>
+        <p>• What makes responses outstanding</p>
+        <p>• Mock interview practice</p>
+        
+        <h3>Presentation & Technical Communication (35 minutes)</h3>
+        <p>• Simplifying complex topics</p>
+        <p>• Communicating with teams and leadership</p>
+        <p>• Explaining technical concepts to clients</p>
+        
+        <h3>Cross-Cultural Communication Excellence (30 minutes)</h3>
+        <p>• Indian-Western communication differences</p>
+        <p>• Professional boundaries and expectations</p>
+        <p>• Global logistics communication strategies</p>
+    </div>
+</div>
+
+<!-- Slide 28: Homework Review Introduction -->
+<div class="slide">
+    <h1>Homework Review: Your STAR Responses</h1>
+    <div class="highlight-box">
+        <h2>What We're Looking For</h2>
+        <p>Today we'll evaluate your homework responses based on professional standards used by global logistics companies.</p>
+    </div>
+    
+    <h3>Evaluation Criteria</h3>
+    <ul>
+        <li><strong>Structure:</strong> Clear STAR format progression</li>
+        <li><strong>Specificity:</strong> Concrete examples with measurable results</li>
+        <li><strong>Relevance:</strong> Logistics and business-focused content</li>
+        <li><strong>Confidence:</strong> Assertive language and ownership of achievements</li>
+        <li><strong>Clarity:</strong> Easy to follow and understand</li>
+    </ul>
+    
+    <p><strong>Remember:</strong> We'll provide constructive feedback to help you excel in real interviews.</p>
+</div>
+
+<!-- Slide 29: Question 1 Template Review -->
+<div class="slide">
+    <h1>"Tell Me About Yourself" - Excellence Framework</h1>
+    <h2>Template Refresh</h2>
+    <div class="highlight-box">
+        <p><strong>Present (30 seconds):</strong> Current role and key responsibilities</p>
+        <p><strong>Past (30 seconds):</strong> Relevant experience and achievements</p>
+        <p><strong>Future (30 seconds):</strong> Career goals and why this position fits</p>
+    </div>
+    
+    <h3>What Makes a Response Outstanding</h3>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>✅ EXCELLENT RESPONSES</h3>
+            <ul>
+                <li>Start with confident present-tense statements</li>
+                <li>Include specific logistics achievements</li>
+                <li>Connect past experience to future role</li>
+                <li>Use active voice consistently</li>
+                <li>End with enthusiasm for the opportunity</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>❌ WEAK RESPONSES</h3>
+            <ul>
+                <li>Start with personal history/childhood</li>
+                <li>Use vague, unmeasurable statements</li>
+                <li>Include irrelevant personal information</li>
+                <li>Sound rehearsed or robotic</li>
+                <li>End without clear direction</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 30: Delivery Excellence -->
+<div class="slide">
+    <h1>Interview Response Delivery Mastery</h1>
+    <h2>The 5 Pillars of Confident Delivery</h2>
+    
+    <div class="star-method" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 20px;">
+        <div class="star-item">
+            <h4>Voice Control</h4>
+            <p>Steady pace, clear articulation, appropriate volume</p>
+        </div>
+        <div class="star-item">
+            <h4>Body Language</h4>
+            <p>Open posture, purposeful gestures, confident stance</p>
+        </div>
+    </div>
+    
+    <div class="star-method" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="star-item">
+            <h4>Eye Contact</h4>
+            <p>70% maintained, natural breaks</p>
+        </div>
+        <div class="star-item">
+            <h4>Verb Consistency</h4>
+            <p>Past tense for experiences, present for current role</p>
+        </div>
+        <div class="star-item">
+            <h4>Smooth Transitions</h4>
+            <p>Natural flow between STAR elements</p>
+        </div>
+    </div>
+    
+    <h3>Hand Gesture Guidelines</h3>
+    <ul>
+        <li><strong>Descriptive gestures:</strong> Show size, direction, process flow</li>
+        <li><strong>Emphatic gestures:</strong> Highlight key points</li>
+        <li><strong>Keep gestures within "speech box":</strong> Shoulder width, waist to chest height</li>
+        <li><strong>Avoid:</strong> Pointing, fidgeting, repetitive movements</li>
+    </ul>
+</div>
+
+<!-- Slide 31: Mock Interview Activity -->
+<div class="slide activity-slide">
+    <h1>Mock Interview Practice Session</h1>
+    <h2>Instructions (15 minutes)</h2>
+    <div class="highlight-box" style="background: white;">
+        <h3>Structured Interview Practice</h3>
+        <p><strong>Format:</strong> Groups of 3 (Interviewer, Candidate, Observer)</p>
+        <p><strong>Time:</strong> 4 minutes per person + 1 minute feedback</p>
+    </div>
+    
+    <h3>Practice Questions (Choose 2)</h3>
+    <ul>
+        <li>"Tell me about yourself"</li>
+        <li>"Why are you interested in this logistics position?"</li>
+        <li>"Describe a time you solved a complex problem"</li>
+        <li>"How do you handle working under pressure?"</li>
+    </ul>
+    
+    <h3>Observer Feedback Checklist</h3>
+    <ul>
+        <li>✅ Used STAR structure effectively</li>
+        <li>✅ Maintained confident body language</li>
+        <li>✅ Spoke clearly and at good pace</li>
+        <li>✅ Provided specific, measurable examples</li>
+        <li>✅ Connected response to logistics role</li>
+    </ul>
+</div>
+
+<!-- Slide 32: Presentation Fundamentals -->
+<div class="slide">
+    <h1>Presentation Excellence in Logistics</h1>
+    <h2>Why Presentation Skills Matter</h2>
+    <div class="highlight-box">
+        <p>In logistics, you'll present to diverse audiences: clients, executives, technical teams, and international partners. Your ability to communicate complex supply chain concepts clearly can win million-dollar contracts.</p>
+    </div>
+    
+    <h3>The 3-Part Presentation Structure</h3>
+    <div class="star-method" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="star-item">
+            <h4>Opening (10%)</h4>
+            <p>Hook attention, state purpose, preview main points</p>
+        </div>
+        <div class="star-item">
+            <h4>Body (80%)</h4>
+            <p>2-4 main points with supporting evidence</p>
+        </div>
+        <div class="star-item">
+            <h4>Closing (10%)</h4>
+            <p>Summarize, call to action, memorable ending</p>
+        </div>
+    </div>
+    
+    <h3>Logistics Presentation Scenarios</h3>
+    <ul>
+        <li><strong>Client pitch:</strong> Proposing freight optimization solutions</li>
+        <li><strong>Executive briefing:</strong> Supply chain performance metrics</li>
+        <li><strong>Team training:</strong> New tracking system implementation</li>
+        <li><strong>Stakeholder update:</strong> Project progress and challenges</li>
+    </ul>
+</div>
+
+<!-- Slide 33: Simplifying Complex Topics -->
+<div class="slide">
+    <h1>Making Complex Topics Simple</h1>
+    <h2>The KISS Principle: Keep It Simple, Smart</h2>
+    
+    <h3>The Pyramid Principle</h3>
+    <div class="highlight-box">
+        <p><strong>Start with conclusion:</strong> Lead with your main message</p>
+        <p><strong>Support with evidence:</strong> Provide 2-3 supporting points</p>
+        <p><strong>Add details:</strong> Include specifics only if needed</p>
+    </div>
+    
+    <h3>Logistics Example: Explaining Route Optimization</h3>
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+        <p><strong>❌ Complex version:</strong> "Our algorithmic approach utilizes multi-variable optimization matrices considering traffic patterns, fuel consumption coefficients, and delivery time windows..."</p>
+        
+        <p><strong>✅ Simple version:</strong> "Our new system finds the fastest, cheapest routes by analyzing traffic, fuel costs, and delivery deadlines. Result: 20% faster deliveries and 15% cost savings."</p>
+    </div>
+    
+    <h3>Simplification Techniques</h3>
+    <ul>
+        <li><strong>Use analogies:</strong> "Think of our logistics network like a highway system..."</li>
+        <li><strong>Visual metaphors:</strong> "Supply chain bottlenecks are like traffic jams..."</li>
+        <li><strong>Concrete examples:</strong> "For a shipment from Mumbai to Chennai..."</li>
+        <li><strong>Numbers that matter:</strong> Focus on business impact, not technical specs</li>
+    </ul>
+</div>
+
+<!-- Slide 34: Audience-Specific Communication -->
+<div class="slide">
+    <h1>Tailoring Your Message to Your Audience</h1>
+    
+    <h3>Know Your Audience Matrix</h3>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>🎯 EXECUTIVES</h3>
+            <ul>
+                <li>Focus on ROI and business impact</li>
+                <li>Use high-level summaries</li>
+                <li>Include strategic implications</li>
+                <li>Present solutions, not just problems</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>⚙️ TECHNICAL TEAMS</h3>
+            <ul>
+                <li>Include implementation details</li>
+                <li>Discuss technical challenges</li>
+                <li>Provide system specifications</li>
+                <li>Address integration concerns</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>🤝 CLIENTS</h3>
+            <ul>
+                <li>Emphasize benefits to their business</li>
+                <li>Use their industry language</li>
+                <li>Address their specific pain points</li>
+                <li>Provide clear next steps</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>👥 OPERATIONS TEAM</h3>
+            <ul>
+                <li>Focus on day-to-day impact</li>
+                <li>Discuss workflow changes</li>
+                <li>Address training needs</li>
+                <li>Include practical examples</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 35: Visual Communication -->
+<div class="slide">
+    <h1>Visual Communication in Presentations</h1>
+    <h2>Show, Don't Just Tell</h2>
+    
+    <h3>Effective Visual Aids for Logistics</h3>
+    <ul>
+        <li><strong>Process flows:</strong> Show supply chain steps visually</li>
+        <li><strong>Before/after comparisons:</strong> Demonstrate improvements</li>
+        <li><strong>Geographic maps:</strong> Display shipping routes and networks</li>
+        <li><strong>Charts and graphs:</strong> Quantify performance metrics</li>
+        <li><strong>Timeline diagrams:</strong> Project milestones and deadlines</li>
+    </ul>
+    
+    <h3>The 6x6 Rule for Slides</h3>
+    <div class="highlight-box">
+        <p><strong>Maximum 6 bullet points per slide</strong></p>
+        <p><strong>Maximum 6 words per bullet point</strong></p>
+        <p><strong>Use slides to support, not replace your speech</strong></p>
+    </div>
+    
+    <h3>Color Psychology in Business</h3>
+    <ul>
+        <li><strong>Blue:</strong> Trust, stability (perfect for logistics)</li>
+        <li><strong>Green:</strong> Growth, efficiency, sustainability</li>
+        <li><strong>Red:</strong> Urgency, attention (use sparingly)</li>
+        <li><strong>Gray:</strong> Professional, neutral backgrounds</li>
+    </ul>
+</div>
+
+<!-- Slide 36: Storytelling in Business -->
+<div class="slide">
+    <h1>The Power of Storytelling in Logistics</h1>
+    <h2>Stories Stick, Statistics Don't</h2>
+    
+    <h3>The Business Story Structure</h3>
+    <div class="star-method" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="star-item">
+            <h4>Context</h4>
+            <p>Set the scene and challenge</p>
+        </div>
+        <div class="star-item">
+            <h4>Conflict</h4>
+            <p>Describe the problem</p>
+        </div>
+        <div class="star-item">
+            <h4>Resolution</h4>
+            <p>Explain your solution</p>
+        </div>
+        <div class="star-item">
+            <h4>Result</h4>
+            <p>Share the outcome</p>
+        </div>
+    </div>
+    
+    <h3>Logistics Story Example</h3>
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; font-style: italic;">
+        <p><strong>Context:</strong> "Last quarter, our biggest client faced a critical shipment deadline..."</p>
+        <p><strong>Conflict:</strong> "Their regular shipping route was blocked due to port strikes..."</p>
+        <p><strong>Resolution:</strong> "We activated our alternative routing protocol and found a solution through rail transport..."</p>
+        <p><strong>Result:</strong> "The shipment arrived on time, saving them $2 million in production delays."</p>
+    </div>
+    
+    <p><strong>Impact:</strong> Stories are 22 times more memorable than facts alone.</p>
+</div>
+
+<!-- Slide 37: Handling Q&A Sessions -->
+<div class="slide">
+    <h1>Mastering Q&A Sessions</h1>
+    <h2>Turn Questions into Opportunities</h2>
+    
+    <h3>The PREP Method for Answering Questions</h3>
+    <div class="star-method" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="star-item">
+            <h4>P - Point</h4>
+            <p>State your main answer</p>
+        </div>
+        <div class="star-item">
+            <h4>R - Reason</h4>
+            <p>Explain why</p>
+        </div>
+        <div class="star-item">
+            <h4>E - Example</h4>
+            <p>Give specific instance</p>
+        </div>
+        <div class="star-item">
+            <h4>P - Point</h4>
+            <p>Restate conclusion</p>
+        </div>
+    </div>
+    
+    <h3>Handling Difficult Questions</h3>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>✅ DO</h3>
+            <ul>
+                <li>Acknowledge the question</li>
+                <li>Pause to think before answering</li>
+                <li>Bridge to key messages</li>
+                <li>Admit when you don't know</li>
+                <li>Offer to follow up later</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>❌ DON'T</h3>
+            <ul>
+                <li>Get defensive or argumentative</li>
+                <li>Make up answers</li>
+                <li>Ignore the question</li>
+                <li>Use filler words excessively</li>
+                <li>Rush your response</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 38: Communicating with Teams and Leadership -->
+<div class="slide">
+    <h1>Effective Team and Leadership Communication</h1>
+    <h2>Getting Help and Reporting Progress</h2>
+    
+    <h3>The SBI Model for Status Updates</h3>
+    <div class="star-method" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="star-item">
+            <h4>S - Situation</h4>
+            <p>Current project status</p>
+        </div>
+        <div class="star-item">
+            <h4>B - Behavior</h4>
+            <p>Actions taken and results</p>
+        </div>
+        <div class="star-item">
+            <h4>I - Impact</h4>
+            <p>Business implications</p>
+        </div>
+    </div>
+    
+    <h3>Communication Hierarchy</h3>
+    <div class="highlight-box">
+        <p><strong>Daily Updates:</strong> Email summaries to immediate supervisor</p>
+        <p><strong>Weekly Reports:</strong> Structured progress reports to management</p>
+        <p><strong>Monthly Reviews:</strong> Strategic discussions with leadership</p>
+        <p><strong>Urgent Issues:</strong> Immediate escalation with solution options</p>
+    </div>
+    
+    <h3>Asking for Help Professionally</h3>
+    <ul>
+        <li><strong>Be specific:</strong> "I need guidance on optimizing the Chennai-Bangalore route"</li>
+        <li><strong>Show effort:</strong> "I've tried X and Y approaches, but encountered Z challenge"</li>
+        <li><strong>Propose timeline:</strong> "Could we discuss this by Friday to meet the client deadline?"</li>
+        <li><strong>Offer alternatives:</strong> "I see three possible solutions..."</li>
+    </ul>
+</div>
+
+<!-- Slide 39: Escalation Communication -->
+<div class="slide">
+    <h1>Strategic Escalation Communication</h1>
+    <h2>When and How to Escalate Issues</h2>
+    
+    <h3>Escalation Criteria</h3>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>✅ ESCALATE WHEN</h3>
+            <ul>
+                <li>Client satisfaction at risk</li>
+                <li>Budget overruns exceeding 10%</li>
+                <li>Timeline delays affecting deliveries</li>
+                <li>Safety or compliance concerns</li>
+                <li>Technical issues beyond your expertise</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>❌ DON'T ESCALATE</h3>
+            <ul>
+                <li>Minor operational hiccups</li>
+                <li>Personal conflicts with colleagues</li>
+                <li>Issues you haven't tried to solve</li>
+                <li>Problems with clear solutions</li>
+                <li>Routine decision-making needs</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>Escalation Communication Template</h3>
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+        <p><strong>Subject:</strong> [URGENT] Issue with [Specific Problem] - Action Needed</p>
+        <p><strong>Summary:</strong> One sentence describing the core issue</p>
+        <p><strong>Impact:</strong> Business/client implications</p>
+        <p><strong>Actions Taken:</strong> What you've tried so far</p>
+        <p><strong>Recommended Solutions:</strong> 2-3 options with pros/cons</p>
+        <p><strong>Timeline:</strong> When decision/action needed</p>
+    </div>
+</div>
+
+<!-- Slide 40: Explaining Technical Concepts to Clients -->
+<div class="slide">
+    <h1>Translating Technical Logistics for Clients</h1>
+    <h2>From Jargon to Value</h2>
+    
+    <h3>The Bridge Translation Method</h3>
+    <div class="highlight-box">
+        <p><strong>Technical Term → Business Benefit → Client Value</strong></p>
+    </div>
+    
+    <h3>Common Translation Examples</h3>
+    <div style="display: grid; gap: 15px; margin: 20px 0;">
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+            <p><strong>❌ Technical:</strong> "We'll implement EDI integration for seamless data synchronization"</p>
+            <p><strong>✅ Client-focused:</strong> "Your orders will automatically sync with our system, eliminating data entry errors and reducing processing time by 50%"</p>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+            <p><strong>❌ Technical:</strong> "Our WMS utilizes advanced algorithmic optimization"</p>
+            <p><strong>✅ Client-focused:</strong> "Our warehouse system intelligently organizes your inventory to reduce picking time and shipping errors"</p>
+        </div>
+    </div>
+    
+    <h3>The "So What?" Test</h3>
+    <ul>
+        <li>After every technical explanation, ask "So what does this mean for you?"</li>
+        <li>Connect features to financial benefits</li>
+        <li>Use specific, measurable outcomes</li>
+        <li>Relate to their industry challenges</li>
+    </ul>
+</div>
+
+<!-- Slide 41: Client Presentation Strategies -->
+<div class="slide">
+    <h1>Winning Client Presentations</h1>
+    <h2>Focus on Their Success, Not Your Technology</h2>
+    
+    <h3>The Client-Centric Presentation Flow</h3>
+    <div class="star-method" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="star-item">
+            <h4>Their Challenge</h4>
+            <p>Demonstrate understanding of their pain points</p>
+        </div>
+        <div class="star-item">
+            <h4>Our Solution</h4>
+            <p>Present tailored approach</p>
+        </div>
+        <div class="star-item">
+            <h4>Proof Points</h4>
+            <p>Show similar success stories</p>
+        </div>
+        <div class="star-item">
+            <h4>Their Future</h4>
+            <p>Paint picture of success</p>
+        </div>
+    </div>
+    
+    <h3>Handling Client Objections</h3>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>✅ EFFECTIVE RESPONSES</h3>
+            <ul>
+                <li>Acknowledge their concern</li>
+                <li>Ask clarifying questions</li>
+                <li>Provide specific examples</li>
+                <li>Offer trial periods or guarantees</li>
+                <li>Focus on ROI and risk mitigation</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>❌ AVOID</h3>
+            <ul>
+                <li>Dismissing their concerns</li>
+                <li>Getting defensive</li>
+                <li>Over-promising capabilities</li>
+                <li>Focusing on features vs benefits</li>
+                <li>Pressuring for immediate decisions</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 42: Explaining Your Vision -->
+<div class="slide">
+    <h1>Communicating Your Strategic Vision</h1>
+    <h2>From Idea to Implementation</h2>
+    
+    <h3>The Vision Communication Framework</h3>
+    <div class="highlight-box">
+        <p><strong>Current State:</strong> Where we are now</p>
+        <p><strong>Future Vision:</strong> Where we want to be</p>
+        <p><strong>Implementation Path:</strong> How we'll get there</p>
+        <p><strong>Success Metrics:</strong> How we'll measure progress</p>
+    </div>
+    
+    <h3>Making Abstract Concepts Concrete</h3>
+    <ul>
+        <li><strong>Use timelines:</strong> "In 6 months, we'll achieve X. In 12 months, Y"</li>
+        <li><strong>Create scenarios:</strong> "Imagine a client calling with an urgent shipment..."</li>
+        <li><strong>Show the journey:</strong> Use process diagrams and flowcharts</li>
+        <li><strong>Connect to company goals:</strong> Link to Stride's mission and values</li>
+    </ul>
+    
+    <h3>Addressing "What If" Questions</h3>
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+        <p><strong>Structure:</strong> Acknowledge → Assess → Address → Assure</p>
+        <p><strong>Example:</strong> "That's a valid concern. Let me analyze the risk factors and show you how we've mitigated similar challenges in the past..."</p>
+    </div>
+</div>
+
+<!-- Slide 43: Practice and Continuous Improvement -->
+<div class="slide">
+    <h1>Continuous Learning and Practice</h1>
+    <h2>Building Communication Excellence Daily</h2>
+    
+    <h3>Daily Practice Strategies</h3>
+    <ul>
+        <li><strong>Mirror practice:</strong> Record yourself presenting for 2 minutes daily</li>
+        <li><strong>Elevator pitch refinement:</strong> Practice with different colleagues weekly</li>
+        <li><strong>Active listening drills:</strong> Focus on one conversation per day</li>
+        <li><strong>Technical translation:</strong> Explain one technical concept in simple terms daily</li>
+    </ul>
+    
+    <h3>Recommended Resources</h3>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>📚 READING</h3>
+            <ul>
+                <li>Supply Chain Management Review</li>
+                <li>Harvard Business Review</li>
+                <li>Logistics Management Magazine</li>
+                <li>MIT Technology Review</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h3>🎧 PODCASTS</h3>
+            <ul>
+                <li>Logistics of Logistics</li>
+                <li>Supply Chain Revolution</li>
+                <li>HBR IdeaCast</li>
+                <li>McKinsey Podcast</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>Online Practice Platforms</h3>
+    <ul>
+        <li><strong>Toastmasters International:</strong> Public speaking practice</li>
+        <li><strong>Coursera Business Communication:</strong> Structured courses</li>
+        <li><strong>LinkedIn Learning:</strong> Professional development</li>
+    </ul>
+</div>
+
+<!-- Slide 44: Cross-Cultural Communication Introduction -->
+<div class="slide">
+    <h1>Cross-Cultural Communication Excellence</h1>
+    <h2>Bridging Indian and Western Business Cultures</h2>
+    
+    <div class="highlight-box">
+        <h3>Why This Matters at Stride Logistics</h3>
+        <p>We serve global clients across continents. Understanding cultural nuances in communication can make the difference between securing a $10 million contract and losing it to cultural misunderstandings.</p>
+    </div>
+    
+    <h3>Cultural Communication Impacts</h3>
+    <ul>
+        <li><strong>Client relationships:</strong> Building trust across cultures</li>
+        <li><strong>Team collaboration:</strong> Working with international colleagues</li>
+        <li><strong>Negotiation success:</strong> Understanding different business styles</li>
+        <li><strong>Career advancement:</strong> Succeeding in global organizations</li>
+    </ul>
+    
+    <h3>The Cultural Iceberg Model</h3>
+    <div style="text-align: center; margin: 20px 0;">
+        <p><strong>Visible (10%):</strong> Language, customs, food</p>
+        <p><strong>Hidden (90%):</strong> Values, assumptions, communication styles</p>
+    </div>
+</div>
+
+<!-- Slide 45: Indian vs Western Communication Styles -->
+<div class="slide">
+    <h1>Communication Style Differences</h1>
+    <h2>Understanding the Contrast</h2>
+    
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>🇮🇳
+
 <div class="container day2">
     ... your Day 2 content ...
 </div>
